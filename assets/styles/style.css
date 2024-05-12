@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    color: aliceblue;
+}
+ul{
+    list-style: none;
+}
+#intro{
+    background-image: url("../Illustrations/Bathome1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
