@@ -1,12 +1,357 @@
-body{
-    background-color: black;
-    color: aliceblue;
+/* @import google font */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Space+Grotesk:wght@700&display=swap');
+
+
+/* paramètres universel */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rajdhani";
 }
+
+
+/*Couleurs*/
+:root{
+    --yellow: #FFFF00;
+    --yellow-light: #F8F184;
+    --beige-Light: #EDDEBF;
+    --blue-medium: #1958FD;
+    --red-dark: #B11313;
+    --crimson-dark: #890009;
+    --black-dark: #0D0E09;
+    --black: #000000;
+    --gray-Light: #c4c4c4;
+    --white: #ffffff;
+    --gradient-white: #ffffff20;
+    --gradient-blue-medium: #19587D40; /* #19587D ---> 40%*/
+    --gradient-crimson-dark: #89000960; /* #890009 ---> 60%*/
+    --gradient-beige-Light: #EDDEBF40; /* #EDDEBF ---> 40%*/
+
+
+}
+body{
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0 7vw; /* Marge du body*/
+}
+nav,.intro,article, .multimedia, .bande-annce{
+    width: 65vw;
+    margin: 0 auto;
+    padding: 40px 60px;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--gradient-white);
+    border-left: 1px solid var(--gradient-white);
+    border-right: 1px solid var(--gradient-white);
+}
+nav a{
+    text-decoration: underline;
+}
+
+
+.intro{
+    border: 1px solid var(--gradient-white);
+    border-bottom:none;
+}
+.intro .flch-descente, .intro p,.intro h1{
+    margin: 0 auto;
+}
+.intro p {
+    width: 30vw;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 150px;
+}
+.intro h1 {
+    width: 30vw;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 30px;
+}
+.intro .flch-descente{
+    padding-top: 20vh;
+    text-align: center;
+}
+/*bouton du hero*/
+.btn-adv{
+    display: flex;
+    justify-content:center;
+
+}
+.btn-adv > .btn{
+    margin: 45px 25px;
+    padding: 22px;
+    width: 200px;
+    background: linear-gradient(to left, #B1131340, #ffffff70);
+}
+.btn-adv > .btn:hover{
+    background: linear-gradient(to left, #B11313, #ffffff);
+}
+.btn-adv a{
+    font-size: small;
+    letter-spacing: 2px;
+}
+
+article,.multimedia,.bande-annce {
+border-left: 1px solid var(--gradient-white);
+border-right: 1px solid var(--gradient-white);
+}
+
+.articles h1, .cmplx-title h1, .multimedia h1{
+    padding-bottom: 30px;
+    font-size: 2em;
+}
+.articles p,.cmplx-title p{
+    font-size: 1.2em;
+}
+
+.cmplx-title{
+    display: flex;
+    justify-content:flex-start;
+}
+
+.cmplx-title h1{
+    align-self: last baseline;
+}
+
+.iron-bat{
+position: relative;
+left: -100px;
+top: 40px;
+
+}
+.iron-bat img{
+    transform: scale(0.8);
+
+}
+
+.Batman-right-side{
+width: 65vw;
+height: 10vh;
+
+}
+.Batman-right-side img{
+    position: relative;
+    right: -44vw;
+    top: -130px;
+    }
+
+.league_img{
+        text-align: center;
+
+    }
+.solo-article{
+    padding-left: 10vw;
+}
+
+.multimedia .mulimedia-show, .quote{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+
+}
+
+.multimedia .mulimedia-show{
+    align-items:center;
+    text-align: center;
+}
+
+
+.mulimedia-show .multimedia-card{
+border: 1px solid rgba(78, 77, 77, 0.5);
+background: linear-gradient(to bottom, var(--gradient-white),var(--gradient-blue-medium));
+border-radius: 15px;
+display: flex;
+width: 40vw;
+height: 250px;
+}
+.multimedia-card .mediatext{
+    padding-left: 40px 30px;
+    line-height: 1.5em;
+    padding: 20px;
+    overflow: hidden;
+    text-align: start;
+    overflow-y:auto;
+}
+.multimedia-card .mediatext p{
+  font-size: 0.8em;
+}
+
+.multimedia-card img{
+    height: 100%;
+}
+
+.bande-annce a img{
+    width: 60vw;
+    }
+.bande-annce a img:hover{
+    box-shadow: 5px 5px 50px rgb(248, 248, 248);
+    }
+    form{
+        margin: 0 auto ;
+        display: table;
+        padding: 50px;
+    }
+    form p{
+        margin-bottom: 20px;
+        font-size: larger;
+    }
+    form label{
+        color: var(--white);
+        opacity: 0.5;
+    }
+    form input[type=text],form input[type=email],textarea,select {
+
+        display: table-cell;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid var(--gradient-beige-Light);
+        color: var(--beige-Light);
+        background-color: rgba(255, 0, 0, 0.001);
+        width: 40vw;
+    }
+
+
+
+    form input[type=checkbox] {
+        margin: 10px 20px;
+        margin-bottom: 50px;
+        visibility: hidden;
+    }
+    form input[type=checkbox]+label{
+        padding: 10px;
+        background: linear-gradient(to right,var(--gradient-beige-Light),var(--gradient-blue-medium) );
+    }
+    form input:checked+label,form input[type=checkbox]+label:hover{
+        background: linear-gradient(to right,var(--beige-Light),var(--black-dark ));
+    }
+    form input::placeholder{
+        color: var(--gradient-beige-Light);
+    }
+
+    form input[type=submit]{
+
+        padding: 22px;
+        width: 200px;
+        background: linear-gradient(to left, #B1131340, #ffffff70);
+        border: none;
+        color: var(--white);
+        font-size: larger;
+    }
+.submt{
+    text-align: center;
+}
+
+select option {
+    background-color: var(--black-dark); /* Background color of each option */
+    color: var(--white);/* Text color of each option */
+    padding: 8px 12px; /* Padding around each option */
+}
+.form-info{
+    margin: 0 auto;
+    width: 77vw;
+    background: linear-gradient(to right, var(--gradient-white),var(--gradient-blue-medium));
+}
+
+.form-info h1{
+text-align: center;
+padding: 30px;
+}
+
+.quote{
+    padding: 30px;
+    margin: auto;
+    width: 50vw;
+    align-content: center;
+    grid-template-rows: 120px 120px 120px;
+}
+
+.quote .qt1{ 
+    grid-row: 1;
+    grid-column: 1;
+}
+.quote .qt2{ 
+    text-align: end;
+    grid-row: 3;
+    grid-column: 3;
+
+}
+.quote .qt-text{
+    text-align: center;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.qt-text p:nth-child(1){
+    font-size: 2em;
+    padding-bottom: 35px;
+    grid-row: 2;grid-column: 2;}
+    .qt-text p:nth-child(2){
+        font-size: 1.2em;
+        padding-bottom: 35px;
+        line-height: 1.3em;}
+
+
+    .ce-projet{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    }
+    .ce-projet>*{
+padding: 10px;
+        }
+
+.partn{
+    text-align: center;
+}
+.partn > *{
+    padding: 10px;
+}
+.sidectrl{
+        
+        height: 10px;
+}
+.ctrl{
+    
+    position: fixed;
+    top: 40%;
+    right: 14.25vw;
+    display: grid;
+    grid-template-rows: 80px 50px 50px 50px 50px;
+    align-content: start;
+    text-align: center;
+}
+
 ul{
     list-style: none;
 }
-#intro{
+
+a{
+    color: var(--white);
+    text-decoration-line: none;
+}
+.backgrd-head{
     background-image: url("../Illustrations/Bathome1.png");
+    height: 901px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center;
+}
+.cards{
+    margin:auto;
+    display: flex;
+    justify-content:space-between;
+    margin-top: 40px;
+
+ }
+
+
+figcaption{
+    text-align: center;
+    font-size: small;
 }
